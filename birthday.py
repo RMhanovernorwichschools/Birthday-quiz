@@ -44,6 +44,7 @@ if bmon==month_name[datetime.today().month] and bday==datetime.today().day and b
 elif (bmon=='October' or bmon=='october' or bmon=='11') and bday=='31':
     statement='You were born on Halloween!'
 else:
+    byear=int(byear)
     if byear>1979 and byear<1990:
         year='eighties'
     elif byear>1989 and byear<2000:

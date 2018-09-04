@@ -32,7 +32,7 @@ Example Session
   Eric, you are a fall baby of the stone age.
 """
 from datetime import datetime
-from calendar import month
+from calendar import month_name
 
 name=input('Hello, what is your name? ')
 bmon=input('Hi {0}, what was the name of the month you were born in? '.format(name))

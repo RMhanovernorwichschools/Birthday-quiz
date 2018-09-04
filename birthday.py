@@ -52,4 +52,12 @@ else:
         year='Stone Age'
     else: 
         year='two thousands'
-
+    if bmon=='December' or bmon=='december' or bmon=='January' or bmon=='january' or bmon=='february' or bmon=='February':
+        mo='winter'
+    elif bmon=='March' or bmon=='march' or bmon=='april' or bmon=='April' or bmon=='may' or bmon=='May':
+        mo='spring'
+    elif bmon=='june' or bmon=='June' or bmon=='July' or bmon=='july' or bmon=='August' or bmon=='august':
+        mo='summer'
+    else:
+        mo='fall'
+    statement='{0}, you are a {1} baby of the {2}.'.format(name, mo, year)

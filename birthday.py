@@ -31,3 +31,25 @@ Example Session
   And the day? 11
   Eric, you are a fall baby of the stone age.
 """
+from datetime import datetime
+from calendar import month
+
+name=input('Hello, what is your name? )
+bmon=input('Hi {0}, what was the name of the month you were born in? '.format(name))
+byear=input('And what year were you born in, {0}? '.format(name))
+bday=input('And the day? ')
+
+if bmon==month_name[datetime.today().month] and bday==datetime.today().day and byear==datetime.today().year:
+    statement='Happy birthday!'
+elif (bmon=='October' or bmon=='october' or bmon=='11') and bday='31':
+    statement='You were born on Halloween!'
+else:
+    if byear>1979 and byear<1990:
+        year='eighties'
+    elif byear>1989 and byear<2000:
+        year='nineties'
+    elif byear<1980:
+        year='Stone Age'
+    else: 
+        year='two thousands'
+

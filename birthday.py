@@ -34,8 +34,6 @@ Example Session
 from datetime import datetime
 from calendar import month_name
 
-print(month_name[datetime.today().month])
-
 name=input('Hello, what is your name? ')
 bmon=input('Hi {0}, what was the name of the month you were born in? '.format(name))
 byear=int(input('And what year were you born in, {0}? '.format(name)))

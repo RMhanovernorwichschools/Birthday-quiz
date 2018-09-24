@@ -34,17 +34,43 @@ Example Session
 from datetime import datetime
 from calendar import month_name
 
+print(month_name[datetime.today().month])
+
 name=input('Hello, what is your name? ')
 bmon=input('Hi {0}, what was the name of the month you were born in? '.format(name))
-byear=input('And what year were you born in, {0}? '.format(name))
+byear=int(input('And what year were you born in, {0}? '.format(name)))
 bday=input('And the day? ')
 
-if bmon==month_name[datetime.today().month] and bday==datetime.today().day and byear==datetime.today().year:
+if bmon=='january' or bmon=='1':
+    bmon=='January'
+elif bmon=='february' or bmon=='2':
+    bmon='February'
+elif bmon=='march' or bmon=='3':
+    bmon='March'
+elif bmon=='april' or bmon=='4':
+    bmon='April'
+elif bmon=='may' or bmon=='5':
+    bmon='May'
+elif bmon=='june' or bmon=='6':
+    bmon='June'
+elif bmon=='july' or bmon=='7':
+    bmon='July'
+elif bmon=='august' or bmon=='8':
+    bmon='August'
+elif bmon=='september' or bmon=='9':
+    bmon='September'
+elif bmon=='october' or bmon=='10':
+    bmon='October'
+elif bmon=='november' or bmon=='11':
+    bmon='November'
+elif bmon=='december' or bmon=='12':
+    bmon='December'
+
+if bmon==month_name[datetime.today().month] and int(bday)==datetime.today().day:
     statement='Happy birthday!'
-elif (bmon=='October' or bmon=='october' or bmon=='11') and bday=='31':
+elif (bmon=='October') and bday=='31':
     statement='You were born on Halloween!'
 else:
-    byear=int(byear)
     if byear>1979 and byear<1990:
         year='eighties'
     elif byear>1989 and byear<2000:
@@ -53,11 +79,11 @@ else:
         year='Stone Age'
     else: 
         year='two thousands'
-    if bmon=='December' or bmon=='december' or bmon=='January' or bmon=='january' or bmon=='february' or bmon=='February':
+    if bmon=='December' or bmon=='January' or bmon=='February':
         mo='winter'
-    elif bmon=='March' or bmon=='march' or bmon=='april' or bmon=='April' or bmon=='may' or bmon=='May':
+    elif bmon=='March' or bmon=='April' or bmon=='May':
         mo='spring'
-    elif bmon=='june' or bmon=='June' or bmon=='July' or bmon=='july' or bmon=='August' or bmon=='august':
+    elif bmon=='June' or bmon=='July' or bmon=='August':
         mo='summer'
     else:
         mo='fall'
